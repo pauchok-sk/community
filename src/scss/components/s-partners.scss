@@ -1,0 +1,32 @@
+.s-partners {
+  padding: 45px 0px;
+  background-color: var(--gray);
+  &__slide {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    gap: 30px;
+    width: 160px !important;
+
+    text-align: center;
+    font-size: 18px;
+  }
+  &__slide-img {
+    width: 100%;
+    height: auto;
+  }
+  &__slide-title {
+    font-weight: 300;
+  }
+  &__slide-btn {
+    text-decoration: underline;
+    color: var(--judge);
+    margin-top: auto;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    @include hover {
+      text-decoration: none;
+    }
+  }
+}

@@ -1,0 +1,121 @@
+.burger-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 110;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .4s ease, visibility .4s ease;
+
+  &._active {
+    opacity: 0.5;
+    visibility: visible;
+  }
+}
+.burger {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 500px;
+  max-width: calc(100% - 40px);
+  overflow-y: auto;
+  z-index: 120;
+  background-color: white;
+  transform: translateX(-500px);
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility .4s ease, opacity .4s ease, transform .4s ease;
+  &._open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+  &__container {
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  &__head {
+    @include flex-between;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  &__logo {
+    display: block;
+    width: 80px;
+    img {
+      width: 100%;
+    }
+  }
+  &__close {
+    @include flex-center;
+    position: relative;
+    width: 25px;
+    height: 25px;
+    color: var(--primary);
+    transition: color .2s ease;
+    @include hover {
+      color: var(--primary-dark);
+    }
+
+    div {
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      background-color: currentColor;
+
+      &:first-child {
+        transform: rotate(45deg);
+      }
+      &:last-child {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+
+    a {
+      font-size: 18px;
+      transition: color .2s ease;
+      @include hover {
+        color: var(--primary);
+      }
+    }
+  }
+  &__social {
+    display: flex;
+    gap: 20px;
+    margin-top: auto;
+    margin-bottom: 15px;
+  }
+  &__social-btn {
+    display: block;
+    width: 30px;
+    height: 30px;
+
+    img {
+      width: 100%;
+    }
+  }
+  &__mail-btn {
+    display: block;
+    width: fit-content;
+    font-size: 18px;
+    color: var(--judge);
+    transition: color .2s ease;
+    @include hover {
+      color: var(--primary);
+    }
+  }
+  &__btn-community {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
