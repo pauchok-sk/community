@@ -12,9 +12,13 @@ export default function headerScroll() {
       if (scrollTop > lastScrollTop && scrollTop > headerHeight) {
         headerBottom.classList.add("_hide");
         header.style.height = `${headerHeight - headerBottom.clientHeight}px`;
+        if (window.matchMedia('(max-width: 991px)').matches) {
+          header.classList.add("_hide")
+        }
       } else {
         headerBottom.classList.remove("_hide");
         header.style.height = `${headerHeight}px`;
+        header.classList.remove("_hide")
       }
       lastScrollTop = scrollTop;
     });

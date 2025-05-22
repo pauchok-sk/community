@@ -96,4 +96,31 @@ export default function sliders() {
       });
     });
   }
+
+  const gallerySlider = document.querySelector(".s-gallery__slider");
+
+  if (gallerySlider) {
+    const swiper = new Swiper(gallerySlider, {
+      speed: 700,
+      slidesPerView: 1,
+      spaceBetween: 20,
+      autoplay: {
+        delay: 3500,
+      },
+      scrollbar: {
+        el: ".s-gallery .slider-scrollbar",
+        draggable: true,
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+        480: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+      },
+    });
+  }
 }

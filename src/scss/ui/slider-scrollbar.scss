@@ -1,0 +1,21 @@
+.slider-scrollbar {
+  background-color: rgba(0, 0, 0, 0.1);
+  height: 1px;
+  margin-top: 45px;
+  @include laptop-min {
+    margin-top: 30px;
+  }
+
+  .swiper-scrollbar-drag {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &::before {
+      position: absolute;
+      content: "";
+      inset: -1px 0px;
+      background-color: var(--primary);
+    }
+  }
+}
