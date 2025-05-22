@@ -1,0 +1,58 @@
+.s-slogan {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--dark);
+  color: white;
+  padding: 70px 0px;
+  z-index: 1;
+  @include tablet {
+    padding: 60px 0px;
+  }
+  &::before {
+    position: absolute;
+    content: "";
+    width: 750px;
+    aspect-ratio: 1/1;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    border-radius: 50%;
+    background-color: var(--primary);
+    z-index: -1;
+    @include laptop {
+      width: 550px;
+    }
+    @include tablet {
+      width: 350px;
+    }
+    @include mobile {
+      width: 280px;
+    }
+  }
+  &__container {
+    max-width: 1150px;
+  }
+  &__content {
+    width: fit-content;
+    font-weight: 700;
+    font-size: 52px;
+    &:first-child {
+      margin-bottom: 10px;
+    }
+    &:last-child {
+      margin-left: auto;
+    }
+    @include laptop-min {
+      font-size: 42px;
+    }
+    @include tablet {
+      font-size: 32px;
+    }
+    @include tablet-min {
+      font-size: 26px;
+    }
+    @include mobile {
+      font-size: 20px;
+    }
+  }
+}

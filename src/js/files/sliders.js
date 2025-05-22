@@ -105,7 +105,7 @@ export default function sliders() {
       slidesPerView: 1,
       spaceBetween: 20,
       autoplay: {
-        delay: 3500,
+        delay: 3000,
       },
       scrollbar: {
         el: ".s-gallery .slider-scrollbar",

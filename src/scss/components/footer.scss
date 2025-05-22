@@ -1,0 +1,208 @@
+.footer {
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 70px 0px 30px 0px;
+    @include laptop-min {
+      flex-wrap: wrap;
+    }
+    @include tablet {
+      padding-top: 40px;
+    }
+    @include tablet-min {
+      flex-direction: column;
+    }
+  }
+  &__main {
+    flex: 0 1 250px;
+    @include tablet {
+      flex: none;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+  &__logo {
+    display: block;
+    width: 185px;
+
+    @include tablet-min {
+      width: 130px;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+  &__copyright {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 130%;
+    margin: 30px 0px 0px 0px;
+    @include tablet {
+      margin-top: 20px;
+    }
+  }
+  &__nav {
+    flex: 0 1 660px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 55px;
+    @include laptop-min {
+      gap: 30px;
+      flex: 1;
+    }
+    @include tablet-min {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+  &__nav-item {
+  }
+  &__title {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 130%;
+    text-transform: uppercase;
+    opacity: 0.5;
+    margin: 0px 0px 20px 0px;
+    @include tablet {
+      font-size: 16px;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    a {
+      font-size: 18px;
+      transition: color 0.2s ease;
+      @include hover {
+        color: var(--primary);
+      }
+      @include tablet {
+        font-size: 16px;
+      }
+    }
+  }
+  &__contacts {
+    flex: 0 1 300px;
+    @include laptop-min {
+      flex: none;
+      width: 100%;
+    }
+    @include tablet {
+      width: auto;
+      flex: 0 1 150px;
+    }
+    @include tablet-min {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+  &__mail {
+    font-size: 24px;
+    color: var(--judge);
+    border-bottom: 1px dotted currentColor;
+    transition: color 0.2s ease;
+    @include hover {
+      color: var(--primary);
+    }
+    @include tablet {
+      font-size: 16px;
+    }
+    @include tablet-min {
+      font-size: 18px;
+    }
+  }
+  &__address {
+    font-weight: 300;
+    font-size: 18px;
+    margin-top: 20px;
+    @include tablet {
+      font-size: 14px;
+    }
+  }
+  &__social {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+  }
+  &__social-btn {
+    display: block;
+    width: 30px;
+    height: 30px;
+    transition: opacity 0.2s ease;
+    @include hover {
+      opacity: 0.7;
+    }
+  }
+  &__bottom {
+    @include flex-between;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+    gap: 30px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    @include tablet {
+      padding-top: 20px;
+    }
+    @include tablet-min {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+  &__bottom-list {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    row-gap: 20px;
+    flex-wrap: wrap;
+    @include tablet-min {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    a {
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 130%;
+      transition: color 0.2s ease;
+      @include hover {
+        color: var(--primary);
+      }
+      @include tablet {
+        font-size: 16px;
+      }
+    }
+  }
+  &__dev {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 130%;
+
+    transition: opacity 0.2s ease;
+    @include hover {
+      opacity: 0.7;
+    }
+    @include tablet {
+      font-size: 16px;
+    }
+
+    img {
+      width: 75px;
+    }
+  }
+}
