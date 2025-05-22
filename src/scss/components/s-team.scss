@@ -1,11 +1,14 @@
 .s-team {
-  background-color: var(--gray);
   overflow: hidden;
   &__list {
+    margin: 0px 0px 45px 0px;
     @media (max-width: 1350px) {
       padding: 0 15px;
       margin-left: -15px;
       margin-right: -15px;
+    }
+    @include laptop-min {
+      margin-bottom: 30px;
     }
   }
   &__slide {
