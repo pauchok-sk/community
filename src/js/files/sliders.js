@@ -84,7 +84,7 @@ export default function sliders() {
     buttonsSliders.forEach((btn) => {
       btn.addEventListener("click", () => {
         const sliderId = btn.dataset.sliderBtn;
-        const currentSlider = tenewsContaineramContainer.querySelector(
+        const currentSlider = newsContainer.querySelector(
           `[data-slider="${sliderId}"]`
         );
 
@@ -106,15 +106,11 @@ export default function sliders() {
           nextEl: newsContainer.querySelector(".slider-btn._next"),
         },
         breakpoints: {
-          1200: {
-            slidesPerView: 4,
-            spaceBetween: 24,
-          },
-          768: {
+          992: {
             slidesPerView: 3,
-            spaceBetween: 20,
+            spaceBetween: 30,
           },
-          480: {
+          576: {
             slidesPerView: 2,
             spaceBetween: 20,
           },
