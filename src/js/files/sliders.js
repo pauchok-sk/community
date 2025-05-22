@@ -23,27 +23,11 @@ export default function sliders() {
     });
   }
 
-  const teamContainer = document.querySelector(".s-team__container");
+  const teamSliders = document.querySelectorAll(".s-team__slider");
 
-  if (teamContainer) {
-    const sliders = teamContainer.querySelectorAll("[data-slider]");
-    let currentSwiper = initSwiper(sliders[0]); // инициализация первого слайдера
-    const buttonsSliders = teamContainer.querySelectorAll("[data-slider-btn]");
-
-    buttonsSliders.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const sliderId = btn.dataset.sliderBtn;
-        const currentSlider = teamContainer.querySelector(
-          `[data-slider="${sliderId}"]`
-        );
-
-        currentSwiper.destroy(); // уничтожаем текущий swiper
-        currentSwiper = initSwiper(currentSlider);
-      });
-    });
-
-    function initSwiper(slider) {
-      const swiper = new Swiper(slider, {
+  if (teamSliders.length) {
+    teamSliders.forEach((s, i) => {
+      const swiper = new Swiper(s, {
         speed: 700,
         slidesPerView: 1,
         spaceBetween: 20,
@@ -51,8 +35,14 @@ export default function sliders() {
           delay: 3000,
         },
         navigation: {
-          prevEl: teamContainer.querySelector(".slider-btn._prev"),
-          nextEl: teamContainer.querySelector(".slider-btn._next"),
+          prevEl: s
+            .closest(".container")
+            .querySelectorAll("[data-add-tab]")
+            [i].querySelector(".slider-btn._prev"),
+          nextEl: s
+            .closest(".container")
+            .querySelectorAll("[data-add-tab]")
+            [i].querySelector(".slider-btn._next"),
         },
         breakpoints: {
           1200: {
@@ -69,32 +59,14 @@ export default function sliders() {
           },
         },
       });
-
-      return swiper;
-    }
+    });
   }
 
-  const newsContainer = document.querySelector(".s-news__container");
+  const newsSliders = document.querySelectorAll(".s-news__slider");
 
-  if (newsContainer) {
-    const sliders = newsContainer.querySelectorAll("[data-slider]");
-    let currentSwiper = initSwiper(sliders[0]); // инициализация первого слайдера
-    const buttonsSliders = newsContainer.querySelectorAll("[data-slider-btn]");
-
-    buttonsSliders.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const sliderId = btn.dataset.sliderBtn;
-        const currentSlider = newsContainer.querySelector(
-          `[data-slider="${sliderId}"]`
-        );
-
-        currentSwiper.destroy(); // уничтожаем текущий swiper
-        currentSwiper = initSwiper(currentSlider);
-      });
-    });
-
-    function initSwiper(slider) {
-      const swiper = new Swiper(slider, {
+  if (newsSliders.length) {
+    newsSliders.forEach((s, i) => {
+      const swiper = new Swiper(s, {
         speed: 700,
         slidesPerView: 1,
         spaceBetween: 20,
@@ -102,8 +74,14 @@ export default function sliders() {
           delay: 3000,
         },
         navigation: {
-          prevEl: newsContainer.querySelector(".slider-btn._prev"),
-          nextEl: newsContainer.querySelector(".slider-btn._next"),
+          prevEl: s
+            .closest(".container")
+            .querySelectorAll("[data-add-tab]")
+            [i].querySelector(".slider-btn._prev"),
+          nextEl: s
+            .closest(".container")
+            .querySelectorAll("[data-add-tab]")
+            [i].querySelector(".slider-btn._next"),
         },
         breakpoints: {
           992: {
@@ -116,8 +94,6 @@ export default function sliders() {
           },
         },
       });
-
-      return swiper;
-    }
+    });
   }
 }

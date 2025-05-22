@@ -1,4 +1,4 @@
-[data-tab] {
+[data-tab], [data-add-tab] {
   display: none;
   &._active {
     display: block;
