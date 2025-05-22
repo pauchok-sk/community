@@ -7,7 +7,7 @@ export default function sliders() {
       slidesPerView: "auto",
       spaceBetween: 30,
       autoplay: {
-        delay: 3500
+        delay: 3500,
       },
       breakpoints: {
         1366: {
@@ -19,7 +19,62 @@ export default function sliders() {
         992: {
           spaceBetween: 40,
         },
+      },
+    });
+  }
+
+  const slidersChangesContainers = document.querySelectorAll(
+    ".slider-changes-container"
+  );
+
+  if (slidersChangesContainers.length) {
+    slidersChangesContainers.forEach((container) => {
+      const sliders = container.querySelectorAll("[data-slider]");
+      let currentSwiper = initSwiper(sliders[0]); // инициализация первого слайдера
+      const buttonsSliders = container.querySelectorAll("[data-slider-btn]");
+
+      buttonsSliders.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const sliderId = btn.dataset.sliderBtn;
+          const currentSlider = container.querySelector(
+            `[data-slider="${sliderId}"]`
+          );
+
+          currentSwiper.destroy(); // уничтожаем текущий swiper
+          currentSwiper = initSwiper(currentSlider)
+        });
+      });
+
+      function initSwiper(slider) {
+        const swiper = new Swiper(slider, {
+          speed: 700,
+          slidesPerView: 1,
+          spaceBetween: 20,
+          autoplay: {
+            delay: 3000,
+          },
+          navigation: {
+            prevEl: container.querySelector(".slider-btn._prev"),
+            nextEl: container.querySelector(".slider-btn._next"),
+          },
+          breakpoints: {
+            1200: {
+              slidesPerView: 4,
+              spaceBetween: 24,
+            },
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
+            480: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+          },
+        });
+
+        return swiper;
       }
-    })
+    });
   }
 }

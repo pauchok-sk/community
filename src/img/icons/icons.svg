@@ -2,4 +2,8 @@
 <path d="M0.5 14H35.5M35.5 14L23 26.5M35.5 14L23 1.5" stroke="currentColor" stroke-width="1.5"/>
 </symbol><symbol viewBox="0 0 21 21" fill="none" id="icon-arrow-rotate" xmlns="http://www.w3.org/2000/svg">
 <path d="M2 19L19 2M19 2H4M19 2V17" stroke="currentColor" stroke-width="3"/>
+</symbol><symbol viewBox="0 0 27 24" fill="none" id="icon-arrow-slide-next" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.5 12H25.5M25.5 12L14.1363 23M25.5 12L14.1363 1" stroke="currentColor" stroke-width="1.5"/>
+</symbol><symbol viewBox="0 0 27 24" fill="none" id="icon-arrow-slide-prev" xmlns="http://www.w3.org/2000/svg">
+<path d="M26.5 12H1.5M1.5 12L12.8637 23M1.5 12L12.8637 1" stroke="currentColor" stroke-width="1.5"/>
 </symbol></svg>

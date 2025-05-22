@@ -1,0 +1,86 @@
+.s-team {
+  background-color: var(--gray);
+  overflow: hidden;
+  &__list {
+    @media (max-width: 1350px) {
+      padding: 0 15px;
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+  }
+  &__slide {
+    display: flex !important;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-color: white;
+    height: auto !important;
+
+    transition: color 0.2s ease;
+
+    @include hover {
+      color: var(--primary);
+      svg {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+  &__slide-gallery {
+    position: relative;
+    width: 100%;
+    padding-bottom: 115%;
+  }
+  &__slide-img {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+  }
+  &__slide-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    @include laptop {
+      padding: 20px;
+    }
+  }
+  &__slide-title {
+    font-weight: 500;
+    font-size: 22px;
+    margin: 0px 0px 20px 0px;
+    @include laptop-min {
+      font-size: 20px;
+    }
+    @include tablet {
+      font-size: 18px;
+    }
+  }
+  &__slide-footer {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: auto;
+    @include laptop-min {
+      gap: 15px;
+    }
+
+    svg {
+      flex-shrink: 0;
+      width: 25px;
+      height: 25px;
+      transition: transform 0.2s ease;
+    }
+  }
+  &__slide-status {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 130%;
+    @include laptop-min {
+      font-size: 16px;
+    }
+  }
+}

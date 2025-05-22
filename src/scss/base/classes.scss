@@ -31,3 +31,16 @@
     padding: 60px 0px;
   }
 }
+
+.sect-head {
+  @include flex-between;
+  gap: 30px;
+  margin-bottom: 45px;
+  @include laptop-min {
+    margin-bottom: 30px;
+  }
+
+  .s-title {
+    margin: 0;
+  }
+}
