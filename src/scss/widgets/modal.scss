@@ -1,0 +1,28 @@
+.modal {
+  @include tablet {
+    padding: 30px 20px !important;
+  }
+  &__title {
+    font-size: 32px;
+    margin: 0px 0px 25px 0px;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  &__form-btn {
+    width: 100%;
+  }
+  &__form-policy {
+    font-size: 16px;
+    margin: 20px 0px 0px 0px;
+
+    a {
+      color: var(--primary);
+      @include hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

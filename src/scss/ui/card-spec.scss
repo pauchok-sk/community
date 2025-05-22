@@ -1,0 +1,60 @@
+.card-spec {
+  display: flex !important;
+  flex-direction: column;
+  background-color: white;
+  &__gallery {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding-bottom: 115%;
+  }
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    flex: 1;
+    @include laptop-middle {
+      padding: 20px;
+    }
+  }
+  &__info {
+    display: block;
+    width: 100%;
+    flex: 1;
+    margin-bottom: 20px;
+    transition: color 0.2s ease;
+    @include hover {
+      color: var(--primary);
+    }
+  }
+  &__title {
+    display: block;
+    font-weight: 500;
+    font-size: 22px;
+    margin: 0px 0px 20px 0px;
+    @include laptop-min {
+      font-size: 20px;
+    }
+  }
+  &__content {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 130%;
+    margin: 0;
+    @include tablet {
+      font-size: 16px;
+    }
+  }
+  &__btn {
+    width: 100%;
+    margin-top: auto;
+  }
+}

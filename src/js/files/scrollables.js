@@ -6,4 +6,6 @@ export default function scrollables() {
   if (window.matchMedia('(max-width: 991px)').matches) {
     new Scrollable(".s-news__list");
   }
+
+  new Scrollable(".s-archive-team__list");
 }

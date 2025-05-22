@@ -9,3 +9,14 @@
     font-size: 28px;
   }
 }
+
+.main-title {
+  font-size: 52px;
+  margin: 0;
+  @include laptop-min {
+    font-size: 44px;
+  }
+  @include tablet {
+    font-size: 32px;
+  }
+}

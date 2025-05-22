@@ -1,0 +1,44 @@
+.s-archive-team {
+  overflow: hidden;
+  padding-top: 0 !important;
+  &__wrapper-list {
+    margin-bottom: 45px;
+    @include laptop-min {
+      margin: 0 -15px 30px -15px;
+    }
+  }
+  &__list {
+    width: 100%;
+    @include laptop-min {
+      padding: 0 15px;
+    }
+  }
+  &__category-name {
+    font-weight: 400;
+    font-size: 36px;
+    margin: 0px 0px 45px 0px;
+    @include laptop-min {
+      margin-bottom: 30px;
+      font-size: 32px;
+    }
+    @include tablet {
+      font-size: 28px;
+    }
+  }
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    row-gap: 45px;
+    @include laptop-middle {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    @include mobile {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

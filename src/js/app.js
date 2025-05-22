@@ -15,6 +15,4 @@ scrollables();
 tabs();
 mediaAdaptive();
 
-Fancybox.bind("[data-fancybox]", {
-  closeButton: false
-});
+Fancybox.bind("[data-fancybox]", {});

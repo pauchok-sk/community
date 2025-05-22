@@ -1,0 +1,14 @@
+.page-head {
+  padding: 50px 0px;
+  margin-top: 158px;
+  @include laptop-middle {
+    margin-top: 157px;
+  }
+  @include laptop-min {
+    margin-top: 109px;
+  }
+  @include tablet {
+    padding: 35px 0px;
+    margin-top: 83px;
+  }
+}
