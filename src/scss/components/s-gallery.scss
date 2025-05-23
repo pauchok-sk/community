@@ -1,22 +1,3 @@
 .s-gallery {
   overflow: hidden;
-  &__slider {
-    overflow: visible;
-  }
-  &__slide {
-    aspect-ratio: 1/1;
-    overflow: hidden;
-  
-    @include hover {
-      img {
-        transform: scale(1.08);
-      }
-    }
-  
-    img {
-      width: 100%;
-      height: 100%;
-      transition: transform .3s ease;
-    }
-  }
 }

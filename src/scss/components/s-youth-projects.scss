@@ -1,0 +1,74 @@
+.s-youth-projects {
+  overflow: hidden;
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 90px;
+    @include laptop-min {
+      margin-bottom: 60px;
+    }
+    @include tablet {
+      gap: 15px;
+    }
+    @include mobile {
+      margin-bottom: 40px;
+    }
+
+    li {
+      position: relative;
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+      padding: 15px 20px;
+      background-color: var(--gray-d);
+
+      &:not(:last-child) {
+        &::after {
+          position: absolute;
+          content: "";
+          right: 0;
+          width: 1px;
+          height: 20px;
+          background-color: rgba(0, 0, 0, 0.1);
+          @include tablet {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    @include laptop-min {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include tablet {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    li {
+      display: flex;
+      align-items: start;
+      gap: 16px;
+      font-size: 20px;
+      @include tablet {
+        font-size: 18px;
+      }
+    }
+
+    svg {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      color: var(--primary);
+    }
+  }
+  &__slider {
+    margin-top: 50px;
+    @include laptop-min {
+      margin-top: 30px;
+    }
+  }
+}

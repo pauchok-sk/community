@@ -1,0 +1,39 @@
+.s-move {
+  overflow: hidden;
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 45px;
+    @include laptop-min {
+      grid-template-columns: repeat(2, 1fr);
+      margin-bottom: 30px;
+    }
+    @include tablet {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    li {
+      display: flex;
+      align-items: start;
+      gap: 16px;
+      font-size: 20px;
+      @include tablet {
+        font-size: 18px;
+      }
+    }
+
+    svg {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      color: var(--primary);
+    }
+  }
+  &__slider {
+    margin-top: 50px;
+    @include laptop-min {
+      margin-top: 30px;
+    }
+  }
+}
