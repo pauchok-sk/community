@@ -1,0 +1,63 @@
+.s-books {
+  &__slider {
+  }
+  &__slide {
+    display: flex !important;
+    background-color: white;
+    height: auto;
+    box-sizing: border-box;
+    @include laptop-middle {
+      flex-direction: column
+    }
+  }
+  &__slide-gallery {
+    @include flex-center;
+    width: 47%;
+    height: 100%;
+    flex-shrink: 0;
+    @include laptop-middle {
+      position: relative;
+      width: 100%;
+      height: auto;
+      padding-bottom: 70%;
+    }
+  }
+  &__slide-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    @include laptop-middle {
+      position: absolute;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+  }
+  &__slide-body {
+    padding: 50px 30px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    @include laptop-middle {
+      padding: 20px;
+    }
+  }
+  &__slide-title {
+    font-weight: 500;
+    font-size: 22px;
+    margin: 0px 0px 20px 0px;
+  }
+  &__slide-content {
+    flex: 1;
+    margin-bottom: 20px;
+  }
+  &__slide-btn {
+    width: 100%;
+  }
+  &__scrollbar {
+    display: none;
+    @include laptop-min {
+      display: block;
+    }
+  }
+}

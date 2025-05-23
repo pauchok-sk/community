@@ -100,7 +100,7 @@ export default function sliders() {
   const gallerySliders = document.querySelectorAll(".gallery-slider");
 
   if (gallerySliders.length) {
-    gallerySliders.forEach(s => {
+    gallerySliders.forEach((s) => {
       const swiper = new Swiper(s, {
         speed: 700,
         slidesPerView: 1,
@@ -127,7 +127,7 @@ export default function sliders() {
           },
         },
       });
-    })
+    });
   }
 
   const federalProjectsSlider = document.querySelector(
@@ -195,6 +195,41 @@ export default function sliders() {
           },
         },
       });
+    });
+  }
+
+  const booksSlider = document.querySelector(".s-books__slider");
+
+  if (booksSlider) {
+    const swiper = new Swiper(booksSlider, {
+      speed: 700,
+      slidesPerView: 1,
+      spaceBetween: 20,
+      autoplay: {
+        delay: 3000,
+      },
+      navigation: {
+        prevEl: ".s-books .slider-btn._prev",
+        nextEl: ".s-books .slider-btn._next",
+      },
+      scrollbar: {
+        el: ".s-books__scrollbar",
+        draggable: true
+      },
+      breakpoints: {
+        1200: {
+          slidesPerView: 2,
+          spaceBetween: 30,
+        },
+        992: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+        576: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+      },
     });
   }
 }
