@@ -6,6 +6,7 @@ import sliders from "./files/sliders.js";
 import spoller from "./files/spoller.js";
 import tabs from "./files/tabs.js";
 import mediaAdaptive from "./files/mediaAdaptive.js";
+import videos from "./files/videos.js";
 
 spoller();
 burger();
@@ -14,5 +15,6 @@ headerScroll();
 scrollables();
 tabs();
 mediaAdaptive();
+videos();
 
 Fancybox.bind("[data-fancybox]", {});

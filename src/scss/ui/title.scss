@@ -13,8 +13,10 @@
 .main-title {
   font-size: 52px;
   margin: 0;
+  margin-bottom: 50px;
   @include laptop-min {
-    font-size: 44px;
+    font-size: 42px;
+    margin-bottom: 30px;
   }
   @include tablet {
     font-size: 32px;

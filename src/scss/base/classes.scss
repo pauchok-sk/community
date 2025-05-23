@@ -17,6 +17,24 @@
       }
     }
   }
+  ul {
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 0;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  a {
+    color: var(--primary);
+    text-decoration: underline;
+    @include hover {
+      text-decoration: none;
+    }
+  }
 }
 
 .sect-m {

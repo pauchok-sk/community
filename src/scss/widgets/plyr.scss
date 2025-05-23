@@ -1,0 +1,12 @@
+.plyr__control {
+  background-color: rgba(165, 24, 38, 0.7) !important;
+  transition: background-color .2s ese !important;
+  @include hover {
+      background-color: rgba(165, 24, 38, 1) !important;
+  }
+}
+
+.plyr__progress input[type="range"],
+.plyr__volume input[type="range"] {
+  color: rgba(165, 24, 38, 0.7) !important;
+}
