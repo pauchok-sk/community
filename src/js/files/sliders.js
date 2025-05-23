@@ -139,6 +139,7 @@ export default function sliders() {
       speed: 700,
       slidesPerView: 1,
       spaceBetween: 20,
+      autoHeight: true,
       autoplay: {
         delay: 3000,
       },
@@ -154,6 +155,7 @@ export default function sliders() {
         576: {
           slidesPerView: 2,
           spaceBetween: 20,
+          autoHeight: false,
         },
       },
     });

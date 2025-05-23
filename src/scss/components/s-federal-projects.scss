@@ -4,9 +4,11 @@
   &__slide {
     display: flex !important;
     flex-direction: column;
-    height: auto !important;
     background-color: white;
     box-sizing: border-box;
+    @media (min-width: 575px) {
+      height: auto !important;
+    }
   }
   &__slide-gallery {
     position: relative;
@@ -46,7 +48,6 @@
     margin: 0px 0px 20px 0px;
   }
   &__content {
-
     ul {
       list-style: none;
       padding: 0;

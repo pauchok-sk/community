@@ -1244,7 +1244,6 @@ body {
 .s-federal-projects__slide {
   display: flex!important;
   flex-direction: column;
-  height: auto!important;
   background-color: #fff;
   box-sizing: border-box
 }
@@ -1635,6 +1634,11 @@ body {
 }
 .footer__dev img {
   width: 75px
+}
+@media (min-width:575px) {
+  .s-federal-projects__slide {
+    height: auto!important
+  }
 }
 @media (min-width:992px) {
   .category-list::-webkit-scrollbar {

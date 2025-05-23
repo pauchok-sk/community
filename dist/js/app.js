@@ -221,6 +221,7 @@
                 speed: 700,
                 slidesPerView: 1,
                 spaceBetween: 20,
+                autoHeight: true,
                 autoplay: {
                     delay: 3e3
                 },
@@ -235,7 +236,8 @@
                     },
                     576: {
                         slidesPerView: 2,
-                        spaceBetween: 20
+                        spaceBetween: 20,
+                        autoHeight: false
                     }
                 }
             });
