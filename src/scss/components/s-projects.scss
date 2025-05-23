@@ -1,0 +1,52 @@
+.s-projects {
+  overflow: hidden;
+  &__head {
+    flex-wrap: wrap;
+  }
+  &__head-btn {
+    @include mobile {
+      width: 100%;
+    }
+  }
+  &__wrapper-list {
+    margin-bottom: 45px;
+    @include laptop-min {
+      margin: 0px -15px 30px -15px;
+    }
+  }
+  &__list {
+    @include laptop-min {
+      padding: 0 15px;
+    }
+  }
+  &__slider {
+  }
+  &__slide {
+    transition: color .2s ease;
+    @include hover {
+      color: var(--primary);
+    }
+  }
+  &__slide-img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+  }
+  &__slide-title {
+    font-weight: 500;
+    font-size: 22px;
+    margin: 20px 0px 0px 0px;
+    @include tablet {
+      font-size: 20px;
+    }
+  }
+  &__slider-nav {
+    display: flex !important;
+    justify-content: center;
+    margin-top: 45px;
+    @include laptop-min {
+      margin-top: 30px;
+    }
+  }
+}

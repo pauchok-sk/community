@@ -4,6 +4,13 @@
   @include mobile {
     display: none;
   }
+  &._center {
+    justify-content: center;
+    margin-top: 45px;
+    @include laptop-min {
+      margin-top: 30px;
+    }
+  }
 }
 .slider-btn {
   @include flex-center;

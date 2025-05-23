@@ -1,0 +1,27 @@
+.s-help {
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    @include laptop-min {
+      gap: 30px;
+    }
+
+    .content {
+      flex: 1;
+      @include laptop-min {
+        flex: none;
+        width: 100%;
+      }
+    }
+  }
+  &__btn {
+    margin-top: 45px;
+    @include laptop-min {
+      margin-top: 30px;
+    }
+    @include mobile {
+      width: 100%;
+    }
+  }
+}

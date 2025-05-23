@@ -15,9 +15,9 @@ export default function tabs() {
         );
 
         allTabs.forEach((t) => t.classList.remove("_active"));
-        addTabs.forEach((t) => t.classList.remove("_active"));
+        addTabs?.forEach((t) => t.classList.remove("_active"));
         currentTab.classList.add("_active");
-        currentAddTab.classList.add("_active");
+        currentAddTab?.classList.add("_active");
 
         allButtons.forEach((b) => b.classList.remove("_active"));
         btn.classList.add("_active");
